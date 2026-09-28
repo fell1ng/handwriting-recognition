@@ -1,6 +1,6 @@
 # 基于深度学习的手写体识别系统
 
-支持手写数字、字母、汉字识别的桌面应用，涵盖数据集构建、模型训练、推理部署、图形界面开发全流程。
+支持手写数字、字母、汉字识别的桌面应用。
 
 ## 功能特性
 
@@ -11,19 +11,15 @@
 
 ## 技术栈
 
-- Python 3.10
-- PyTorch 2.x + Torchvision
-- CUDA 12.6
-- OpenCV、PIL、NumPy
-- tkinter
+Python 3.10、PyTorch 2.x、CUDA 12.6、OpenCV、tkinter
 
 ## 数据集
 
-| 数据集 | 任务 | 类别数 | 训练样本 |
-| :--- | :--- | :--- | :--- |
-| MNIST | 数字识别 | 10 | 60000 |
-| EMNIST Letters | 字母识别 | 26 | 124800 |
-| CASIA-HWDB | 汉字识别 | 246 | 147265 |
+| 数据集 | 任务 | 类别数 |
+| :--- | :--- | :--- |
+| MNIST | 数字 | 10 |
+| EMNIST | 字母 | 26 |
+| CASIA-HWDB | 汉字 | 246 |
 
 ## 模型性能
 
@@ -35,19 +31,20 @@
 
 ## 使用方法
 
-### 环境安装
+安装依赖：
 
-```bash
-pip install torch torchvision --index-url https://download.pytorch.org/whl/cu126
-pip install opencv-python numpy matplotlib pillow
+pip install torch torchvision opencv-python numpy matplotlib
 
+训练模型：
 
-## 训练模型
-python train_mnist.py      # 数字
-python train_letters.py    # 字母
-python train_chinese.py    # 汉字
+python train_mnist.py
+python train_letters.py
+python train_chinese.py
 
-## 运行界面
+运行界面：
+
 python gui_all.py
 
+## 作者
 
+陈德强 - 人工智能专业
